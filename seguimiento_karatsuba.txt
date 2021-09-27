@@ -15,40 +15,40 @@ Y = 29985355
 x1 = 3359 , x0 = 4113 , y1 = 2998 , y0 = 5355
 x1 + x0 = 7472, y1 + y0 = 8353
 P = Karatsuba(7472,8353)
-	7472 * 8353, n = 4
-	X = 7472
-	Y = 8353
-	x1 = 74, x0 = 72, y1 = 83, y0 = 53
-	x1 + x0 = 146,  y1 + y0 = 136
-	P = Karatsuba(146,136)
-		0146 * 0136, n = 4
-		X = 0146
-		Y = 0136
-		x1 = 01, x0 = 46, y1 = 01, y0 = 36
-		x1 + x0 = 47, y1 + y0 = 37
-		P = Karatsuba(47, 37)
-			47 * 37, n = 2
-			X = 47
-			Y = 37
-			x1 = 4, x0 = 7, y1 = 3, y0 = 7
-			x1 + x0 = 11, y1 + y0 = 10
-			P = Karatsuba(11,10)
-				11 * 10, n =2
-				X = 11
-				Y = 10
-				x1 = 1, x0 = 1, y1 = 1, y0 = 0
-				x1 + x0 = 2, y1 + y0 = 1
-				P = Karatsuba (2, 1)
-					2 * 1 , n = 1
-					CASO BASE devuelve 2*1 = 2
-				P = 2
-				x1y1 = Karatsuba(1,1)
-					1*1 , n = 1
-					CASO BASE devuelve 1*1 = 1
-				x1y1 = 1
-				x0y0 = Karatsuba(1,0)
+    7472 * 8353, n = 4
+    X = 7472
+    Y = 8353
+    x1 = 74, x0 = 72, y1 = 83, y0 = 53
+    x1 + x0 = 146,  y1 + y0 = 136
+    P = Karatsuba(146,136)
+        0146 * 0136, n = 4
+        X = 0146
+        Y = 0136
+        x1 = 01, x0 = 46, y1 = 01, y0 = 36
+        x1 + x0 = 47, y1 + y0 = 37
+        P = Karatsuba(47, 37)
+            47 * 37, n = 2
+            X = 47
+            Y = 37
+            x1 = 4, x0 = 7, y1 = 3, y0 = 7
+            x1 + x0 = 11, y1 + y0 = 10
+            P = Karatsuba(11,10)
+                11 * 10, n =2
+                X = 11
+                Y = 10
+                x1 = 1, x0 = 1, y1 = 1, y0 = 0
+                x1 + x0 = 2, y1 + y0 = 1
+                P = Karatsuba (2, 1)
+                    2 * 1 , n = 1
+                    CASO BASE devuelve 2*1 = 2
+                P = 2
+                x1y1 = Karatsuba(1,1)
+                    1*1 , n = 1
+                    CASO BASE devuelve 1*1 = 1
+                x1y1 = 1
+                x0y0 = Karatsuba(1,0)
                     1 * 0 , n = 1
-					CASO BASE devuelve 1*0 = 0
+                    CASO BASE devuelve 1*0 = 0
                 x0y0 = 0
                 devuelve x1y1 * 10^n + (P - x1y1 - x0y0) * 10^(n/2) + x0y0
                 devuelve 1 * 10^2 + (2 - 1 - 0) * 10^1 + 0
@@ -408,11 +408,3 @@ x0y0 = 22025115
 devuelve x1y1 * 10^n + (P - x1y1 - x0y0) * 10^(n/2) + x0y0
 devuelve 10070282 * 10^8 + (62413616 - 10070282 - 22025115) * 10^4 + 22025115
 devuelve 1007331404215115
-
-
-
-
-
-
-
- 
